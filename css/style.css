@@ -212,3 +212,46 @@ body{
   }
 
 }
+
+
+.js .js-acoordion dd {
+  display: none;
+}
+
+.js-acoordion dt::after{
+  content:'⬎' ;
+  margin-left: 10px;
+}
+
+.js-acoordion dt.ativa::after{
+  content:'⬏' ;
+}
+.js-acoordion dd.ativa{
+  display: block;
+  animation: slideDown .5s forwards;
+}
+
+@keyframes slideDown {
+
+  from{
+    opacity: 0;
+    max-height: 0;
+  }
+  to{
+    max-height: 200px;
+    opacity: 1;
+
+  }
+  
+}
+
+.js .js-scroll{
+  opacity: 0;
+  transform: translate3d(-30,0,0);
+  transition: .3s;
+
+}
+.js .js-scroll.ativa{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
